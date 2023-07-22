@@ -1,0 +1,57 @@
+Arguments: 
+  /usr/local/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js add mongoose
+
+PATH: 
+  /opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:/opt/homebrew/sbin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.16.1
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: connect ENETUNREACH 104.16.25.35:443 - Local (0.0.0.0:63376)
+      at internalConnect (node:net:1066:16)
+      at defaultTriggerAsyncIdScope (node:internal/async_hooks:464:18)
+      at emitLookup (node:net:1323:9)
+      at /opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:103587:28
+      at /opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:103496:13
+      at module.exports.RawTask.call (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:79584:19)
+      at flush (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:79666:29)
+      at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+
+npm manifest: 
+  {
+    "name": "developer-portfolio-starter-code",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint"
+    },
+    "dependencies": {
+      "eslint": "8.36.0",
+      "eslint-config-next": "13.2.4",
+      "framer-motion": "^10.6.0",
+      "next": "13.2.4",
+      "react": "18.2.0",
+      "react-dom": "18.2.0"
+    },
+    "devDependencies": {
+      "autoprefixer": "^10.4.14",
+      "postcss": "^8.4.25",
+      "tailwindcss": "^3.3.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
