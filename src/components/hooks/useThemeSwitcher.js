@@ -10,15 +10,16 @@ const useThemeSwitcher = () => {
         const userPreference = window.localStorage.getItem("theme")
 
         const handleChange = ()=>{
-            if(userPreference){
-                let check = userPreference === 'dark'? "dark":"light";
-                setMode(check);
-                if(check==='dark'){
-                    document.documentElement.classList.add("dark")
-                }else{
-                    document.documentElement.classList.remove("dark")
-                }
-            }else{
+            // if(userPreference){
+            //     let check = userPreference === 'dark'? "dark":"light";
+            //     setMode(check);
+            //     if(check==='dark'){
+            //         document.documentElement.classList.add("dark")
+            //     }else{
+            //         document.documentElement.classList.remove("dark")
+            //     }
+            // }else
+            // {
                 let check = mediaQuery.matches ? "dark":"light"
                 setMode(check)
                 window.localStorage.setItem("theme",check);
@@ -27,7 +28,7 @@ const useThemeSwitcher = () => {
                 }else{
                     document.documentElement.classList.remove("dark")
                 }
-            }
+            // }
         }
 
         handleChange();
@@ -38,13 +39,13 @@ const useThemeSwitcher = () => {
     },[])
 
     useEffect(()=>{
-        if(mode === 'dark'){
+        // if(mode === 'dark'){
             window.localStorage.setItem("theme","dark")
             document.documentElement.classList.add("dark")
-        }if(mode==='light'){
-            window.localStorage.setItem("theme","light")
-            document.documentElement.classList.remove("dark")
-        }
+        // }if(mode==='light'){
+        //     window.localStorage.setItem("theme","light")
+        //     document.documentElement.classList.remove("dark")
+        // }
     },[mode])
     
   return [mode,setMode]
