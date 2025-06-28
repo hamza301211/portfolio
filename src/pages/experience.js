@@ -74,12 +74,12 @@ const Experience = () => {
               work="Worked as an Associate Software Engineer on a procurement and financial solutions project, leveraging the MERN stack (MongoDB, Express.js, React, Node.js) to develop robust, full-stack applications. Integrated AWS technologies such as S3 Bucket for storage, AWS Lambda for serverless computing, and AWS EC2 for scalable infrastructure. Implemented CI/CD pipelines using GitHub Actions to streamline development, testing, and deployment processes, ensuring efficient and automated delivery of software solutions. Collaborated with cross-functional teams to deliver high-performance and scalable systems for business-critical applications."
             />
             <Details
-              position="MERN Stack developer Internee"
-              company="Professional freelancing training program"
-              companyLink="https://pftpedu.org/"
-              time="Sep 2022 - Dec 2022"
+              position="Senior Software Engineer"
+              company="Tekvill Solutions"
+              companyLink="https://tekvill.com/"
+              time="2024 - Present"
               address="Hybrid"
-              work="Learned basics of full stack development,Created REST api's and worked with UI/UX design aswell."
+              work="Led a major refactoring effort to modernize legacy Node.js codebases, improving maintainability, reducing technical debt, and ensuring compliance with modern coding standards. Integrated third-party APIs into MERN stack applications, such as payment processing and geolocation services, to extend functionality and enhance user experience, ensuring seamless interoperability and reliability across platforms. Managed projects using Agile methodologies, ensuring timely, high-quality delivery through effective sprint planning and boosting team performance by up to 35%."
             />
             {/* <Details 
                 position="Associate Software Engineer"

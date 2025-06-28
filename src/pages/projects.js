@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import exSquares from "../../public/images/projects/exsquares.png";
-import malmo from "../../public/images/projects/malmo.png";
+import malmo from "../../public/images/projects/zero.png";
 import answerCampus from "../../public/images/projects/AnswerCampus.png";
 import monoply from "../../public/images/projects/monoply.png";
 import kbm from "../../public/images/projects/kbm.png";
@@ -126,8 +126,8 @@ const projects = () => {
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="Malmo City Pizzeria"
-                link="https://github.com/hamza301211/MalmoCityPizzeria"
+                title="Zero Swipe"
+                link="https://zero-psi.vercel.app/"
                 type="Minor Project"
                 github="https://github.com/hamza301211/MalmoCityPizzeria"
                 img={malmo}

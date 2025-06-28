@@ -17,7 +17,11 @@ export default function App({ Component, pageProps }) {
     <>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+      <meta name="description" content="Hamza Nadeem Khan - Portfolio showcasing my work, skills, and experience as a developer" />
+      <meta name="author" content="Hamza Nadeem Khan" />
+      <meta property="og:title" content="Hamza Nadeem Khan | Portfolio" />
+      <meta property="og:description" content="Portfolio of Hamza Nadeem Khan - Showcasing my work, skills, and experience as a developer" />
+      <link rel="icon" href="/favicon.ico" />
     </Head>
     <main className={`${montSerrat.variable} font-mont bg-dark w-full min-h-screen`}>
       <NavBar/>

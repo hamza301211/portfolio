@@ -51,7 +51,7 @@ const Certifications = () => {
             type="IBM Full-Stack JavaScript Developer"
             time="2024"
             place="IBM"
-            info="an online non-credit course authorized by IBM and offered through Coursera."
+            info="an online non-credit course authorized by IBM and offered through Coursera covering all aspects of javascript"
             image="/Full Stack Developer.pdf"
           />
           <Details
