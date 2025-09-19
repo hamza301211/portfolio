@@ -53,6 +53,10 @@ export default function App({ Component, pageProps }) {
       <meta name="geo.region" content="PK" />
       <meta name="geo.placename" content="Pakistan" />
       <meta name="ICBM" content="33.6844, 73.0479" />
+
+      <meta name="geo.region" content="GB" />
+      <meta name="geo.placename" content="United Kingdom" />
+      <meta name="ICBM" content="51.509865, -0.118092" />
       
       {/* Schema.org markup for Google+ */}
       <meta itemProp="name" content="Hamza Nadeem Khan | Full Stack Developer Portfolio" />
