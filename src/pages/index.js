@@ -11,8 +11,48 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Hamza Nadeem | Home</title>
-        <meta name="description" content="home page of hamza" />
+        <title>Hamza Nadeem Khan | Full Stack Developer & MERN Stack Expert Portfolio</title>
+        <meta name="description" content="Welcome to Hamza Nadeem Khan's portfolio - Full Stack Developer specializing in MERN stack (MongoDB, Express.js, React, Node.js), Docker, Kubernetes, and cloud computing. Explore my projects and professional experience." />
+        <meta name="keywords" content="Hamza Nadeem Khan, Full Stack Developer, MERN Stack, React Developer, Node.js, MongoDB, Express.js, Docker, Kubernetes, Cloud Computing, Portfolio, Software Engineer, Web Developer" />
+        
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Hamza Nadeem Khan",
+              "jobTitle": "Full Stack Developer",
+              "description": "Full Stack Developer with expertise in the MERN stack (MongoDB, Express.js, React, Node.js) and a strong background in cloud computing. Skilled in building scalable and high-performance web applications, leveraging technologies like Docker and Kubernetes for containerization and orchestration.",
+              "url": "https://hamzanadeem.vercel.app",
+              "sameAs": [
+                "https://github.com/hamzanadeemkhan",
+                "https://linkedin.com/in/hamzanadeemkhan"
+              ],
+              "knowsAbout": [
+                "MongoDB",
+                "Express.js", 
+                "React",
+                "Node.js",
+                "Docker",
+                "Kubernetes",
+                "Cloud Computing",
+                "JavaScript",
+                "Full Stack Development",
+                "Web Development"
+              ],
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Freelance"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "Pakistan"
+              }
+            })
+          }}
+        />
       </Head>
       <TransitionEffect />
       <main className="flex items-center w-full min-h-screen text-light">

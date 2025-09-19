@@ -103,8 +103,46 @@ const projects = () => {
   return (
     <>
       <Head>
-        <title>Hamza Nadeem | Projects</title>
-        <meta name="description" content="projects description" />
+        <title>Projects by Hamza Nadeem Khan | MERN Stack & Full Stack Development Portfolio</title>
+        <meta name="description" content="Explore Hamza Nadeem Khan's full stack development projects including ExSquares procurement platform, KBM Technologies invoice tracking, Answer Campus, and other MERN stack applications using React, Node.js, MongoDB, Express.js, AWS, and Docker." />
+        <meta name="keywords" content="Hamza Nadeem Khan Projects, MERN Stack Projects, Full Stack Development Portfolio, React Projects, Node.js Applications, MongoDB Projects, Express.js Development, AWS Integration, Docker Projects, ExSquares, KBM Technologies" />
+        
+        {/* JSON-LD Structured Data for Projects */}
+        <script
+          type="application/ld+json"  
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "CollectionPage",
+              "name": "Projects by Hamza Nadeem Khan",
+              "description": "Portfolio of full stack development projects showcasing MERN stack expertise, AWS integration, and modern web development technologies.",
+              "url": "https://hamzanadeem.vercel.app/projects",
+              "author": {
+                "@type": "Person",
+                "name": "Hamza Nadeem Khan",
+                "jobTitle": "Full Stack Developer"
+              },
+              "mainEntity": [
+                {
+                  "@type": "SoftwareApplication",
+                  "name": "ExSquares",
+                  "description": "Procurement and financial solutions platform developed using MERN stack with AWS integration",
+                  "url": "https://exsquares.co.uk/",
+                  "applicationCategory": "BusinessApplication",
+                  "operatingSystem": "Web Browser"
+                },
+                {
+                  "@type": "SoftwareApplication", 
+                  "name": "KBM Technologies",
+                  "description": "Invoice and remittance tracking system with admin panel, built with MERN stack and AWS",
+                  "url": "https://kbmbusiness.co.uk/",
+                  "applicationCategory": "BusinessApplication",
+                  "operatingSystem": "Web Browser"
+                }
+              ]
+            })
+          }}
+        />
       </Head>
       <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center text-light">
