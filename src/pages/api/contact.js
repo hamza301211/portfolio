@@ -5,7 +5,7 @@ export default async function handler (req, res) {
     try {
         if (req.method === 'POST') {
             await database.connect();
-            await Contact.create(JSON.parse(req.body));
+            await Contact.create(req.body);
             return res.status(200).json({
                 message:"Message sent successfully!"
             })
