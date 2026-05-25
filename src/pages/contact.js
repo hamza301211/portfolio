@@ -2,7 +2,7 @@ import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import React, { useEffect, useRef } from "react";
-import profileImage from "../../public/images/profile/hamza.jpg";
+import profileImage from "../../public/images/profile/hamza-profile.png";
 import Image from "next/image";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamza Nadeem Khan — Full Stack Developer CV</title>
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      font-size: 11pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+      color: #1a1a1a;
+      line-height: 1.45;
+      background: #f5f5f5;
+    }
+
+    /* ===== PAGE WRAPPER ===== */
+    .resume {
+      max-width: 210mm;
+      margin: 0 auto;
+      background: #fff;
+      padding: 28px 36px 24px;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      text-align: center;
+      margin-bottom: 14px;
+      border-bottom: 2px solid #0a2540;
+      padding-bottom: 12px;
+    }
+
+    .header h1 {
+      font-size: 22pt;
+      font-weight: 700;
+      color: #0a2540;
+      letter-spacing: 1px;
+      margin-bottom: 2px;
+    }
+
+    .header .subtitle {
+      font-size: 12pt;
+      font-weight: 600;
+      color: #2563eb;
+      margin-bottom: 6px;
+    }
+
+    .header .contact-row {
+      font-size: 9pt;
+      color: #444;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px 16px;
+    }
+
+    .header .contact-row a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .header .contact-row span::before {
+      content: '|';
+      margin-right: 0;
+      display: none;
+    }
+
+    /* ===== SECTION ===== */
+    .section {
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #0a2540;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      border-bottom: 1.5px solid #d1d5db;
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+    }
+
+    /* ===== SUMMARY ===== */
+    .summary p {
+      font-size: 10pt;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* ===== SKILLS ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px 24px;
+      font-size: 9.5pt;
+    }
+
+    .skills-grid .skill-row {
+      display: flex;
+    }
+
+    .skills-grid .skill-label {
+      font-weight: 700;
+      color: #0a2540;
+      min-width: 130px;
+      flex-shrink: 0;
+    }
+
+    .skills-grid .skill-value {
+      color: #333;
+    }
+
+    /* ===== EXPERIENCE ===== */
+    .exp-entry {
+      margin-bottom: 10px;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .exp-header .exp-title {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+
+    .exp-header .exp-title .company {
+      color: #2563eb;
+    }
+
+    .exp-header .exp-date {
+      font-size: 9pt;
+      color: #666;
+      font-style: italic;
+    }
+
+    .exp-location {
+      font-size: 9pt;
+      color: #666;
+      margin-bottom: 3px;
+    }
+
+    .exp-bullets {
+      list-style: disc;
+      padding-left: 18px;
+      font-size: 9.5pt;
+      color: #333;
+    }
+
+    .exp-bullets li {
+      margin-bottom: 2px;
+      line-height: 1.45;
+    }
+
+    .exp-bullets li strong {
+      color: #1a1a1a;
+    }
+
+    /* ===== PROJECTS ===== */
+    .project-entry {
+      margin-bottom: 6px;
+    }
+
+    .project-entry .proj-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+
+    .project-entry .proj-desc {
+      font-size: 9.5pt;
+      color: #333;
+      margin-left: 0;
+    }
+
+    /* ===== EDUCATION & CERTS ===== */
+    .edu-entry, .cert-entry {
+      margin-bottom: 4px;
+    }
+
+    .edu-entry .edu-title {
+      font-size: 10pt;
+      font-weight: 700;
+    }
+
+    .edu-entry .edu-detail {
+      font-size: 9pt;
+      color: #666;
+    }
+
+    .certs-list {
+      list-style: disc;
+      padding-left: 18px;
+      font-size: 9.5pt;
+      color: #333;
+      columns: 2;
+      column-gap: 24px;
+    }
+
+    .certs-list li {
+      margin-bottom: 2px;
+    }
+
+    /* ===== PRINT STYLES ===== */
+    @media print {
+      html { font-size: 10.5pt; }
+      body { background: #fff; }
+      .resume {
+        padding: 20px 28px 16px;
+        max-width: none;
+        box-shadow: none;
+      }
+      .section { margin-bottom: 10px; }
+      .exp-entry { margin-bottom: 8px; }
+      .header { margin-bottom: 10px; padding-bottom: 8px; }
+
+      @page {
+        size: A4;
+        margin: 12mm 10mm;
+      }
+    }
+
+    /* ===== SCREEN SHADOW ===== */
+    @media screen {
+      .resume {
+        box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        margin: 20px auto;
+        border-radius: 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume">
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <h1>Hamza Nadeem Khan</h1>
+      <div class="subtitle">Full Stack Developer</div>
+      <div class="contact-row">
+        <span>Bury, Manchester, UK</span>
+        <span>&#8226;</span>
+        <span><a href="mailto:hamza.dev2024@gmail.com">hamza.dev2024@gmail.com</a></span>
+        <span>&#8226;</span>
+        <span>+44 7884 529734</span>
+        <span>&#8226;</span>
+        <span><a href="https://www.linkedin.com/in/hamza-nadeem-khan-420389242/" target="_blank">LinkedIn</a></span>
+        <span>&#8226;</span>
+        <span><a href="https://hamzanadeem.vercel.app" target="_blank">hamzanadeem.vercel.app</a></span>
+        <span>&#8226;</span>
+        <span><a href="https://github.com/hamza301211" target="_blank">GitHub</a></span>
+      </div>
+    </header>
+
+    <!-- ===== PROFESSIONAL SUMMARY ===== -->
+    <section class="section summary">
+      <h2 class="section-title">Professional Summary</h2>
+      <p>
+        Full Stack Developer with 3+ years of commercial experience building high-performance, scalable web applications using React.js, Next.js, Node.js, TypeScript, and cloud technologies. Proven track record of reducing page load times by up to 35%, cutting deployment cycles by 70%, and driving user engagement growth across fintech, SaaS, and enterprise platforms. Skilled in microservices architecture, CI/CD pipelines, containerisation (Docker, Kubernetes), and Agile delivery. Currently based in Manchester, UK.
+      </p>
+    </section>
+
+    <!-- ===== TECHNICAL SKILLS ===== -->
+    <section class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-row">
+          <span class="skill-label">Frontend:</span>
+          <span class="skill-value">React.js, Next.js, React Native, Redux, TypeScript, JavaScript, Tailwind CSS, Material UI, SCSS</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Backend:</span>
+          <span class="skill-value">Node.js, Express.js, Nest.js, RESTful APIs, WebSockets, Stripe, PayPal</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Databases:</span>
+          <span class="skill-value">MongoDB, MySQL, PostgreSQL, Redis, Sequelize, SQLite</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">DevOps & Cloud:</span>
+          <span class="skill-value">AWS (S3, Lambda, EC2, CloudFront, MediaLive), Docker, Kubernetes, CI/CD, GitHub Actions</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Testing:</span>
+          <span class="skill-value">Jest, Cypress, Selenium, Mocha, ESLint</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Tools & Methods:</span>
+          <span class="skill-value">Git, Agile/Scrum, JIRA, Figma, Slack, Microsoft Teams</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROFESSIONAL EXPERIENCE ===== -->
+    <section class="section">
+      <h2 class="section-title">Professional Experience</h2>
+
+      <!-- Hulee Ltd -->
+      <div class="exp-entry">
+        <div class="exp-header">
+          <span class="exp-title">Full Stack Developer — <span class="company">Hulee Ltd.</span></span>
+          <span class="exp-date">Aug 2025 – Present</span>
+        </div>
+        <div class="exp-location">Manchester, UK</div>
+        <ul class="exp-bullets">
+          <li>Core developer on <strong>Orta (orta.co.uk)</strong> — a workforce management SaaS platform handling onboarding, compliance tracking, rota planning, and shift management for care services and hospitality industries.</li>
+          <li>Architected and implemented a <strong>global error handler with centralised logging and Sentry integration</strong> across the entire backend, drastically reducing mean time to detection and improving incident response.</li>
+          <li>Built secure workflows including <strong>CSV bulk staff upload, CSRF protection</strong>, and precision timestamp tracking for automated timesheet calculations and GPS clock-in features.</li>
+          <li>Designed RESTful APIs for <strong>compliance dashboards</strong> with automatic expiry alerts (90/60/30 days), DBS tracking, and document management — supporting CQC regulatory requirements.</li>
+          <li>Built comprehensive <strong>CI/CD pipelines</strong> with Jest and GitHub Actions, reducing regression incidents by <strong>40%</strong> and enabling continuous deployment.</li>
+        </ul>
+      </div>
+
+      <!-- Tekvill Solutions -->
+      <div class="exp-entry">
+        <div class="exp-header">
+          <span class="exp-title">Senior Full Stack Developer — <span class="company">Tekvill Solutions</span></span>
+          <span class="exp-date">Nov 2024 – Jun 2025</span>
+        </div>
+        <div class="exp-location">Hybrid</div>
+        <ul class="exp-bullets">
+          <li>Built and optimised scalable <strong>microservices</strong> using Node.js, Express, MongoDB, and Kubernetes, improving deployment efficiency and system uptime to <strong>99.9%</strong>.</li>
+          <li>Developed responsive SPAs using <strong>React.js</strong> with server-side rendering, cutting page load times by up to <strong>35%</strong> and boosting user engagement.</li>
+          <li>Designed and implemented <strong>event-driven architecture</strong> using WebSockets for real-time notifications, live dashboards, and collaborative features across SaaS platforms.</li>
+          <li>Led <strong>API gateway design</strong> and third-party integrations (payment processing, geolocation services), ensuring seamless interoperability across platforms.</li>
+          <li>Drove Agile development through effective sprint planning and stakeholder collaboration, accelerating delivery and improving team output by <strong>35%</strong>.</li>
+        </ul>
+      </div>
+
+      <!-- Innovage.io -->
+      <div class="exp-entry">
+        <div class="exp-header">
+          <span class="exp-title">Full Stack Developer — <span class="company">Innovage.io</span></span>
+          <span class="exp-date">Apr 2023 – Nov 2024</span>
+        </div>
+        <div class="exp-location">Lahore, Pakistan (Remote)</div>
+        <ul class="exp-bullets">
+          <li>Developed dynamic UIs with <strong>React.js and Next.js</strong> using Context API and reusable component patterns, increasing user engagement by <strong>40%</strong>.</li>
+          <li>Built and optimised a <strong>microservices backend</strong> using Node.js (Express), TypeScript, Docker, and MySQL, enhancing type safety and query performance by <strong>35%</strong>.</li>
+          <li>Integrated <strong>AWS services</strong> (S3 for storage, Lambda for serverless computing, EC2 for scalable infrastructure) to power a high-availability procurement platform.</li>
+          <li>Created <strong>CI/CD pipelines</strong> with GitHub Actions and comprehensive testing (Jest, Selenium, Mocha), reducing bugs by <strong>50%</strong> and deployment times by <strong>70%</strong>.</li>
+          <li>Led Agile sprint teams, aligning front-end and back-end efforts, achieving <strong>15% faster</strong> delivery timelines.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== KEY PROJECTS ===== -->
+    <section class="section">
+      <h2 class="section-title">Key Projects</h2>
+
+      <div class="project-entry">
+        <span class="proj-title">Orta — Workforce Management SaaS:</span>
+        <span class="proj-desc">Full-stack platform for onboarding, compliance tracking, rota planning, and shift management. Built with MERN stack featuring GPS clock-in, DBS tracking, and CQC-compliant reporting.</span>
+      </div>
+
+      <div class="project-entry">
+        <span class="proj-title">Vice Forex — Real-Time Trading Platform:</span>
+        <span class="proj-desc">Full-stack trading system with WebSocket-based real-time market data, ProRealTime API integration, and modular TypeScript architecture for low-latency operations.</span>
+      </div>
+
+      <div class="project-entry">
+        <span class="proj-title">Sports Streaming Platform — Live Video Infrastructure:</span>
+        <span class="proj-desc">Built using AWS MediaLive, S3, CloudFront with Next.js + TypeScript frontend, admin dashboards, and role-based access control.</span>
+      </div>
+
+      <div class="project-entry">
+        <span class="proj-title">My Home Pathway — Fintech Mortgage App:</span>
+        <span class="proj-desc">Led React-based front-end development, integrated Plaid for secure financial data access, improved onboarding and mobile engagement by 35%.</span>
+      </div>
+
+      <div class="project-entry">
+        <span class="proj-title">Zero Swipe — Job Search Platform:</span>
+        <span class="proj-desc">Cross-platform React Native app with Tinder-style swipe job matching, real-time chat, and secure payment integration for UK job market.</span>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-entry">
+        <span class="edu-title">BSc Computer Science</span>
+        <span class="edu-detail"> — COMSATS University Islamabad | 2019 – 2023</span>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section class="section">
+      <h2 class="section-title">Certifications</h2>
+      <ul class="certs-list">
+        <li>IBM Full-Stack JavaScript Developer — IBM</li>
+        <li>Application Development using Microservices and Serverless — IBM</li>
+        <li>Get Started with Cloud Native, DevOps, Agile, and NoSQL — IBM</li>
+        <li>Introduction to Containers with Docker, Kubernetes & OpenShift — IBM</li>
+        <li>AWS Cloud Technical Essentials — AWS</li>
+      </ul>
+    </section>
+
+  </div>
+</body>
+</html>

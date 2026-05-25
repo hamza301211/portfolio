@@ -5,7 +5,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import exSquares from "../../public/images/projects/exsquares.png";
+import orta from "../../public/images/projects/orta.png";
 import malmo from "../../public/images/projects/zero.png";
 import answerCampus from "../../public/images/projects/AnswerCampus.png";
 import monoply from "../../public/images/projects/monoply.png";
@@ -106,10 +106,10 @@ const projects = () => {
         <title>Projects by Hamza Nadeem Khan | MERN Stack & Full Stack Development Portfolio</title>
         <meta name="description" content="Explore Hamza Nadeem Khan's full stack development projects including ExSquares procurement platform, KBM Technologies invoice tracking, Answer Campus, and other MERN stack applications using React, Node.js, MongoDB, Express.js, AWS, and Docker." />
         <meta name="keywords" content="Hamza Nadeem Khan Projects, MERN Stack Projects, Full Stack Development Portfolio, React Projects, Node.js Applications, MongoDB Projects, Express.js Development, AWS Integration, Docker Projects, ExSquares, KBM Technologies" />
-        
+
         {/* JSON-LD Structured Data for Projects */}
         <script
-          type="application/ld+json"  
+          type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -125,14 +125,14 @@ const projects = () => {
               "mainEntity": [
                 {
                   "@type": "SoftwareApplication",
-                  "name": "ExSquares",
+                  "name": "Orta",
                   "description": "Procurement and financial solutions platform developed using MERN stack with AWS integration",
-                  "url": "https://exsquares.co.uk/",
+                  "url": "https://orta.co.uk/",
                   "applicationCategory": "BusinessApplication",
                   "operatingSystem": "Web Browser"
                 },
                 {
-                  "@type": "SoftwareApplication", 
+                  "@type": "SoftwareApplication",
                   "name": "KBM Technologies",
                   "description": "Invoice and remittance tracking system with admin panel, built with MERN stack and AWS",
                   "url": "https://kbmbusiness.co.uk/",
@@ -154,12 +154,12 @@ const projects = () => {
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
-                title="Ex Squares"
-                summary="ExSquares(exsquares.co.uk) is a procurement and financial solutions project developed using the MERN stack (MongoDB, Express.js, React, Node.js) to deliver a comprehensive, scalable platform for managing procurement processes and financial transactions. The project integrates AWS technologies, including S3 for storage, AWS Lambda for serverless functionality, and EC2 for scalable infrastructure."
-                link="https://exsquares.co.uk/"
+                title="Orta"
+                summary="Orta(orta.co.uk) is a procurement and financial solutions project developed using the MERN stack (MongoDB, Express.js, React, Node.js) to deliver a comprehensive, scalable platform for managing procurement processes and financial transactions. The project integrates AWS technologies, including S3 for storage, AWS Lambda for serverless functionality, and EC2 for scalable infrastructure."
+                link="https://orta.co.uk/"
                 type="Featured Project"
-                github="https://github.com/Rapolus87/kbm-remit"
-                img={exSquares}
+                github=""
+                img={orta}
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
